@@ -19,6 +19,10 @@ def resize_and_convert_image(input_path, output_path):
 
         image.save(output_path, "PNG")
 
+@bot.message_handler(commands=['start'])
+def handle_start(message):
+    bot.send_message(message.chat.id, "Hi! I can convert and resize pictures in the right size so that you can send them to the sticker bot. I can only convert one image at a time. If you want to convert multiple images quickly then use my other resizer on github (you can find my github on my website)\n\nMade by @binnichtaktiv\nhttps://binnichtaktiv.github.io")
+
 @bot.message_handler(content_types=['photo'])
 def handle_photo(message):
     file_id = message.photo[-1].file_id
