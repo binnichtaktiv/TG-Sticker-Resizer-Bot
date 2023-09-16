@@ -3,7 +3,7 @@ from PIL import Image
 import os
 import time
 
-TOKEN = "6400495210:AAFmAqWPnbkfqI8e6AjrCUHTUE8lixqi0rs"
+TOKEN = "YOUR_BOT_TOKEN_HERE"
 bot = telebot.TeleBot(TOKEN)
 
 def retry_after(func):
