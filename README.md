@@ -33,7 +33,7 @@ Replace `"YOUR_BOT_TOKEN_HERE"` in the script with your Telegram bot token obtai
 4. **Run the Bot**
 
 Execute the bot using the command:
-python <filename>.py
+```python TG-Sticker-Resizer-Bot.py```
 
 ## Usage
 
