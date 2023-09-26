@@ -22,7 +22,7 @@ def resize_and_fill_image(input_path, output_path):
         x_offset = (target_size[0] - new_width) // 2
         y_offset = (target_size[1] - new_height) // 2
         
-        new_image.paste(image.resize((new_width, new_height), Image.ANTIALIAS), (x_offset, y_offset))
+        new_image.paste(image.resize((new_width, new_height), Image.LANCZOS), (x_offset, y_offset))
         
         new_image.save(output_path, "PNG")
 
@@ -49,7 +49,7 @@ def handle_image(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-    bot.reply_to(message, "Error: Please send a picture.")
+    bot.reply_to(message, "Fehler: Bitte senden Sie ein Bild.")
 
 while True:
     try:
